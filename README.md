@@ -42,9 +42,9 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- belongs_to :messages
+- has_many :messages
 - has_many :groups_users
-- hasmany :users, through: :groups_users
+- has_many :users, through: :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
