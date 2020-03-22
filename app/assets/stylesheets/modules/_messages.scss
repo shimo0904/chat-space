@@ -9,7 +9,7 @@
 .side-bar {
    height: 100vh;
    width: 300px;
-  .side-bar__user-name {
+  &__user-name {
     background-color: #253141;
     height: 100px;
     display: flex;
