@@ -4,20 +4,15 @@
       .side-bar__user-name__box__name
         = current_user.name
       .side-bar__user-name__box__icon
-        = link_to "#" do
+        = link_to new_group_path do
           %i.far.fa-edit
         = link_to edit_user_path(current_user) do
           %i.fas.fa-cog
   .side-bar__group-list
-    = link_to "#" do
-      .group
-        .group-name
-          グループA
-        .group-text
-          こんにちは
-    = link_to "#" do
-      .group
-        .group-name
-          グループB
-        .group-text
-          こんばんは
+    - current_user.groups.each do |group|
+      = link_to "#" do
+        .group
+          .group-name
+            = group.name
+          .group-text
+            メッセージはまだありません
